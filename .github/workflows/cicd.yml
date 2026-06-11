@@ -61,5 +61,5 @@ jobs:
            ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.EC2_PUBLIC_USERNAME }}@${{ secrets.EC2_PUBLIC_IP }} \
            "
            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/weather_app:latest
-           sudodocker run -d --name my_weather_app-cont1 -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/weather_app:latest
+           sudo docker run -d --name my_weather_app-cont1 -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/weather_app:latest
            "
